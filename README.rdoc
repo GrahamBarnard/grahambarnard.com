@@ -1,11 +1,11 @@
 == Graham Barnard Personal Website
 
-This is my personal website which will be pushed live once development has been created
+This is my personal website which will be pushed live once development has been completed
 
 == Main Sections
 
-Sites is divided into three main sections, Home, Sites and Blog.
+Site is divided into three main sections: Home, Sites and Blog.
 
-Home is the welcome page which contains quick explanation
-Sites contain examples of websites I have created
-Blog will contain posts about myself and technology
+Home is the landing page
+Sites contain examples of websites I have worked on
+Blog will have posts about my experiences and technologies I have used
