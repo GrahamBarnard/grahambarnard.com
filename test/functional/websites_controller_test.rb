@@ -18,7 +18,7 @@ class WebsitesControllerTest < ActionController::TestCase
 
   test "should create website" do
     assert_difference('Website.count') do
-      post :create, website: { description: @website.description, name: @website.name, ur: @website.ur }
+      post :create, website: { description: @website.description, name: @website.name, url: @website.url }
     end
 
     assert_redirected_to website_path(assigns(:website))
@@ -35,7 +35,7 @@ class WebsitesControllerTest < ActionController::TestCase
   end
 
   test "should update website" do
-    put :update, id: @website, website: { description: @website.description, name: @website.name, ur: @website.ur }
+    put :update, id: @website, website: { description: @website.description, name: @website.name, url: @website.url }
     assert_redirected_to website_path(assigns(:website))
   end
 

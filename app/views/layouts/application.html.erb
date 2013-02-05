@@ -3,12 +3,29 @@
 <head>
   <title>Graham Barnard</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Dosis", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="website">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/home" title="Home">Home</a></li>
+          <li><a href="/sites" title="Websites">Websites</a></li>
+          <li><a href="/posts" title="Posts">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<%= yield %>
+    <div class="main">
+      <%= yield %>
+    </div>
 
+    <footer>
+      <div class="copyright">©Copyright Graham Barnard <%= Time.now.year %> All Rights Reserved</div>
+    </footer>
+  </div>
+  <%= javascript_include_tag "application" %>
 </body>
 </html>

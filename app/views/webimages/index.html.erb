@@ -1,0 +1,31 @@
+<h1>Listing webimages</h1>
+
+<table>
+  <tr>
+    <th>Url</th>
+    <th>Title</th>
+    <th>Caption</th>
+    <th>Order</th>
+    <th>Website</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @webimages.each do |webimage| %>
+  <tr>
+    <td><%= webimage.url %></td>
+    <td><%= webimage.title %></td>
+    <td><%= webimage.caption %></td>
+    <td><%= webimage.imageorder %></td>
+    <td><%= webimage.website_id %></td>
+    <td><%= link_to 'Show', webimage %></td>
+    <td><%= link_to 'Edit', edit_webimage_path(webimage) %></td>
+    <td><%= link_to 'Destroy', webimage, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Webimage', new_webimage_path %>

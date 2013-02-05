@@ -1,3 +1,5 @@
 class Website < ActiveRecord::Base
-  attr_accessible :description, :name, :ur
+  has_many :webimages
+  attr_accessible :description, :name, :url
 end
+

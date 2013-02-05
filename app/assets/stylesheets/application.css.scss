@@ -1,0 +1,69 @@
+@import "bootstrap";
+@import "fancybox";
+
+/* Created by Graham Barnard */
+body { font-family: 'Dosis', sans-serif; background: #F0F0F0; margin: -8px 8px 8px; }
+
+a, a:hover { text-decoration: none; }
+
+.website {
+  width:80%; 
+  margin: 0 auto;
+  padding:18px 20px 10px;
+  background: white;
+
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius:0.5em;
+
+  -webkit-box-shadow: 1px 1px 5px #000;
+  -mox-box-shadow: 1px 1px 5px #000;
+  
+}
+
+
+header { 
+
+  nav ul { 
+    text-align:center;
+    list-style:none;
+    padding:0;
+    border-bottom: solid 1px lightgrey;
+    margin: 0;
+
+    li {
+      display:inline-block;
+      a {
+        padding:5px;
+        color: #333333;
+        
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em;
+        border-radius:0.5em;
+      } 
+      
+      a.current, a:hover, a:active, a:focus {
+        background: #F0F0F0;
+        
+        -webkit-transition: background-color .2s linear;
+        -moz-transition: background-color .2s linear;
+        transition: background-color .2s linear;
+      }
+    }
+  }
+}
+
+.main {
+  .website-image-preview { width:200px; height:auto; }
+}
+
+.header-title {
+  text-align : center;
+}
+
+footer {
+/*  border-top: 1px solid #F0F0F0;
+*/  .copyright { text-align: center; margin: 20px 0 10px; font-size:0.75em; }
+}
+
+

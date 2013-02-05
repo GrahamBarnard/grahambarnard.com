@@ -37,7 +37,7 @@ class WebsitesController < ApplicationController
     @website = Website.find(params[:id])
   end
 
-  # POST /websites
+  # POST /websites_url
   # POST /websites.json
   def create
     @website = Website.new(params[:website])

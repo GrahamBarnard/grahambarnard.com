@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @webimage.url %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @webimage.title %>
+</p>
+
+<p>
+  <b>Caption:</b>
+  <%= @webimage.caption %>
+</p>
+
+<p>
+  <b>Image Order:</b>
+  <%= @webimage.imageorder %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @webimage.website_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_webimage_path(@webimage) %> |
+<%= link_to 'Back', webimages_path %>
