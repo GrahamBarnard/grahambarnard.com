@@ -15,3 +15,13 @@
 //= require_tree .
 //= require bootstrap
 //= require fancybox
+//= require ckeditor/init
+
+$(document).ready(function() {
+   if ($('textarea').length > 0) {      
+     var data = $('textarea');
+     $.each(data, function(i) {
+       CKEDITOR.replace(data[i].id);
+     });    
+   } 
+});

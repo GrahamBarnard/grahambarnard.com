@@ -1,6 +1,6 @@
 <h1>Listing webimages</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Url</th>
     <th>Title</th>
@@ -19,7 +19,6 @@
     <td><%= webimage.caption %></td>
     <td><%= webimage.imageorder %></td>
     <td><%= webimage.website_id %></td>
-    <td><%= link_to 'Show', webimage %></td>
     <td><%= link_to 'Edit', edit_webimage_path(webimage) %></td>
     <td><%= link_to 'Destroy', webimage, confirm: 'Are you sure?', method: :delete %></td>
   </tr>

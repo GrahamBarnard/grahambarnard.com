@@ -1,26 +1,5 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <b>Post:</b>
-  <%= @blog.post %>
-</p>
-
-<p>
-  <b>Views:</b>
-  <%= @blog.views %>
-</p>
-
-<p>
-  <b>Published:</b>
-  <%= @blog.published %>
-</p>
-
-
-
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<article>
+  <h2><%= @blog.title %></h2>
+  <%= raw @blog.post %>
+</article>
 <%= link_to 'Back', blogs_path %>

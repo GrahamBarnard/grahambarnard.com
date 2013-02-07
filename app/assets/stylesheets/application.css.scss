@@ -11,14 +11,14 @@ a, a:hover { text-decoration: none; }
   margin: 0 auto;
   padding:18px 20px 10px;
   background: white;
-
+  position:relative;
+  
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
   border-radius:0.5em;
 
   -webkit-box-shadow: 1px 1px 5px #000;
   -mox-box-shadow: 1px 1px 5px #000;
-  
 }
 
 
@@ -62,8 +62,45 @@ header {
 }
 
 footer {
-/*  border-top: 1px solid #F0F0F0;
-*/  .copyright { text-align: center; margin: 20px 0 10px; font-size:0.75em; }
+  margin: 20px 0 10px;
+ .copyright { text-align: center; font-size:0.75em; }
 }
 
+.hidden {
+  display:none;
+}
 
+.social-network { 
+	display:inline-block; 
+	background: url(image_path('social-networks.png')) no-repeat top left; 
+	width: 32px; 
+	height: 32px; 
+	background-position-y: -42px; 
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	-o-transition:all 0.2s ease;
+	-ms-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+
+	cursor:pointer;
+}
+
+.social-navigation { position: absolute; bottom :10px; right:10px; }
+
+.social-network.twitter{ background-position: -1134px -42px}
+.social-network.skype{ background-position: -924px -42px}
+.social-network.facebook{ background-position: -210px -42px}
+.social-network.linkedin{ background-position: -504px -42px}
+
+.social-network.twitter:hover,.active .social-network.twitter{ background-position: -1134px 0}
+.social-network.skype:hover,.active .social-network.skype{ background-position: -924px 0}
+.social-network.facebook:hover,.active .social-network.facebook{ background-position: -210px 0}
+.social-network.linkedin:hover,.active .social-network.linkedin{ background-position: -504px 0}
+
+.align-right { text-align: right; }
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+
+@media screen and (max-width: 640px) {
+  .social-navigation { position:relative; height: 32px; display:block; text-align:right; width:100%; }
+}

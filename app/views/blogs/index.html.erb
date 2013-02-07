@@ -14,7 +14,7 @@
 <% @blogs.each do |blog| %>
   <tr>
     <td><%= blog.title %></td>
-    <td><%= blog.post %></td>
+    <td><%= raw truncate(blog.post, :length => 60) %></td>
     <td><%= blog.views %></td>
     <td><%= blog.published %></td>
     <td><%= link_to 'Show', blog %></td>

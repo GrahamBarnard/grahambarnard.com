@@ -6,10 +6,14 @@
         </div> 
         <div class="row-fluid">
       <% end %>
-      <div class="span4">
+      <div class="span6">
         <article>
-          <% website.webimages.order(:imageorder).limit(1).each do |webimage| %>
-            <%= link_to(image_tag(webimage.url), asset_path(webimage.url), :class => "fancybox") %>
+          <% website.webimages.order(:imageorder).each_with_index do |webimage, webindex| %>
+            <% if webindex == 0 %>
+              <%= link_to(image_tag(webimage.url), "/sites/" + website.id.to_s, :class => "fancybox", :rel => website.name.gsub(/[^0-9a-z]/i, '')) %>
+            <% else %>
+              <%= link_to(webimage, "/sites/" + website.id.to_s, :class => "fancybox hidden", :rel => website.name.gsub(/[^0-9a-z]/i, '')) %>
+            <% end %>
           <% end %>
         </article>
       </div>

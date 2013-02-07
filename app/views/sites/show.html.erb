@@ -1,0 +1,17 @@
+<% @website.webimages.each do |webimage| %>
+  <%= image_tag(webimage.url, :caption => webimage.caption ) %>
+<% end %>
+<p>
+  <b>Name:</b>
+  <%= @website.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @website.url %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @website.description %>
+</p>

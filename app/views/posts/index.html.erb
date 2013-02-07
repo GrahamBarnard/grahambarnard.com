@@ -4,9 +4,8 @@
   <% @posts.each do |post| %>
     <div class="row-fluid">
       <article>
-        <h2><%= link_to post.title, post %></h1>
-        <%= post.post %>
-        <%= post.views %>
+        <h2><%= link_to post.title, post %></h2>
+        <%= raw truncate(post.post, :length => 250) %>
       <article>
      </div> 
   <% end %>

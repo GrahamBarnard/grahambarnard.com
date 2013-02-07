@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  skip_before_filter :authorize
+
   #index to display all available blog posts
   def index
    	@posts = Blog.where(published: true)
@@ -8,5 +10,4 @@ class PostsController < ApplicationController
       format.json { render json: @posts }
     end
   end
-
 end

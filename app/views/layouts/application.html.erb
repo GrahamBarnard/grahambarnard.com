@@ -11,9 +11,15 @@
     <header>
       <nav>
         <ul>
-          <li><a href="/home" title="Home">Home</a></li>
-          <li><a href="/sites" title="Websites">Websites</a></li>
-          <li><a href="/posts" title="Posts">Blog</a></li>
+          <li><%= link_to "Home", home_path %></li>
+          <li><%= link_to "Websites", sites_path %></li>
+          <li><%= link_to "Blog", posts_path %></li>
+          <% if session[:user_id] %>
+            <li><%= link_to "Admin Panel", admin_path %></li>
+            <li><%= link_to "Logout", logout_path, :method=>:delete %></li>
+          <% else %>
+          
+          <% end %>
         </ul>
       </nav>
     </header>
@@ -23,6 +29,12 @@
     </div>
 
     <footer>
+      <nav class="social-navigation">
+        <a href="https://twitter.com/grahambarnard" target="_blank" class="social-network twitter"></a>
+        <a href="http://www.linkedin.com/in/barnardgraham" target="_blank" class="social-network linkedin"></a>
+        <a href="skype://grahamjbarnard" class="social-network skype"></a>
+
+      </nav>
       <div class="copyright">©Copyright Graham Barnard <%= Time.now.year %> All Rights Reserved</div>
     </footer>
   </div>
