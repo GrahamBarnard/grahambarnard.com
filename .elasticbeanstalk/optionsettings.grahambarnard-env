@@ -11,7 +11,7 @@ DBUser=ebroot
 DBSnapshotIdentifier=grahambarnard
 DBInstanceClass=db.t1.micro
 DBEngine=mysql
-DBDeletionPolicy=Snapshot
+DBDeletionPolicy=Delete
 
 [aws:elasticbeanstalk:hostmanager]
 LogPublicationControl=false
