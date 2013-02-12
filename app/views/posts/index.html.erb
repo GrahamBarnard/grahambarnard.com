@@ -4,7 +4,8 @@
   <% @posts.each do |post| %>
     <div class="row-fluid">
       <article>
-        <h2><%= link_to post.title, post %></h2>
+        <h3><%= link_to post.title, "/posts/" + post.id.to_s %></h3>
+        <h5><%= post.posted_at.strftime("%B %-d, %Y") %></h5>
         <%= raw truncate(post.post, :length => 250) %>
       <article>
      </div> 

@@ -5,6 +5,10 @@
     <th>Name</th>
     <th>Url</th>
     <th>Description</th>
+    <th>Published</th>
+    <th>Image Url</th>
+    <th></th>
+    <th></th>
     <th></th>
   </tr>
 
@@ -13,6 +17,12 @@
     <td><%= website.name %></td>
     <td><%= website.url %></td>
     <td><%= website.description %></td>
+    <td><%= website.published %></td>
+    <td><%= website.imageurl %></td>
+    <td><%= link_to 'Show', website %></td>
+    <td><%= link_to 'Edit', edit_website_path(website) %></td>
+    <td><%= link_to 'Destroy', website, confirm: 'Are you sure?', method: :delete %></td>
+    
   </tr>
 <% end %>
 </table>

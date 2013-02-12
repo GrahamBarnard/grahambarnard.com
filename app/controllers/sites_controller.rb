@@ -14,13 +14,12 @@ class SitesController < ApplicationController
   # GET /websites/1.json
   def show
     @website = Website.find(params[:id])
-
+    
     respond_to do |format|
       format.html { render :layout => false }
-      format.js
       format.json { render json: @website }
     end
   end
-
+  
   
 end

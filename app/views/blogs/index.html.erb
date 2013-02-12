@@ -4,8 +4,9 @@
   <tr>
     <th>Title</th>
     <th>Post</th>
-    <th>Views</th>
+    <th>Featured</th>
     <th>Published</th>
+    <th>Published Date</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,8 +16,9 @@
   <tr>
     <td><%= blog.title %></td>
     <td><%= raw truncate(blog.post, :length => 60) %></td>
-    <td><%= blog.views %></td>
+    <td><%= blog.featured %></td>
     <td><%= blog.published %></td>
+    <td><%= blog.posted_at %></td>
     <td><%= link_to 'Show', blog %></td>
     <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
     <td><%= link_to 'Destroy', blog, confirm: 'Are you sure?', method: :delete %></td>

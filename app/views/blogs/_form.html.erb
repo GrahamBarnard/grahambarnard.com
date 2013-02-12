@@ -19,6 +19,13 @@
   </div>
 
   <div class="control-group">
+    <%= f.label :featured, :class => "control-label" %>
+    <div class="controls">
+      <%= f.check_box :featured %>
+    </div>
+  </div>
+
+  <div class="control-group">
     <%= f.label :published, :class => "control-label" %>
     <div class="controls">
       <%= f.check_box :published %>

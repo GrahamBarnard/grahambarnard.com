@@ -1,0 +1,6 @@
+<article>
+  <h2><%= @post.title %></h2>
+  <h5><%= @post.posted_at.strftime("%B %-d, %Y") %></h5>
+  <%= raw @post.post %>
+</article>
+<%= link_to 'Back', blogs_path %>
