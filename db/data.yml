@@ -1,0 +1,277 @@
+
+---
+websites:
+  columns:
+  - id
+  - name
+  - url
+  - description
+  - created_at
+  - updated_at
+  - published
+  - imageurl
+  records: 
+  - - 1
+    - Walsh Integrated
+    - www.walshintegrated.com
+    - Worked as a web & mobile developer
+    - '2012-12-26 02:29:44.333030'
+    - '2013-02-08 23:39:03.133136'
+    - false
+    - website_walsh_1.png
+  - - 3
+    - The Message Studios
+    - www.themessagestudios.com
+    - Created websites for people
+    - '2013-02-05 15:15:04.160049'
+    - '2013-02-08 23:39:51.845971'
+    - false
+    - tms_logo.png
+  - - 4
+    - Elevator Pitch
+    - www.grahambarnard.com
+    - This is my elevator pitch
+    - '2013-02-08 18:35:39.691111'
+    - '2013-02-08 23:40:34.621102'
+    - false
+    - elevator_pitch.png
+
+---
+webimages:
+  columns:
+  - id
+  - url
+  - title
+  - caption
+  - imageorder
+  - website_id
+  - created_at
+  - updated_at
+  records: 
+  - - 5
+    - walsh_1.png
+    - Walsh QA New Inspector
+    - ''
+    - 1
+    - 1
+    - '2013-02-09 01:55:03.119026'
+    - '2013-02-09 02:29:05.386624'
+  - - 6
+    - walsh_2.png
+    - Walsh QA Report
+    - ''
+    - 2
+    - 1
+    - '2013-02-09 01:56:54.816855'
+    - '2013-02-09 01:56:54.816855'
+  - - 7
+    - walsh_3.png
+    - Walsh QA Report Result
+    - ''
+    - 3
+    - 1
+    - '2013-02-09 01:57:30.232387'
+    - '2013-02-09 02:36:13.400000'
+  - - 8
+    - msg_1.png
+    - Message Studios CMS
+    - ! "<p>Message Studios CMS</p>\r\n"
+    - 1
+    - 3
+    - '2013-02-09 19:05:32.494686'
+    - '2013-02-09 19:05:32.494686'
+  - - 9
+    - msg_2.png
+    - Front End Development
+    - ''
+    - 2
+    - 3
+    - '2013-02-09 19:19:23.164343'
+    - '2013-02-09 19:19:40.070856'
+  - - 10
+    - elevator_1.png
+    - What I love
+    - ! "<p>What I love</p>\r\n"
+    - 1
+    - 4
+    - '2013-02-09 19:40:38.731803'
+    - '2013-02-09 19:40:38.731803'
+  - - 11
+    - elevator_2.png
+    - Education
+    - ! "<p>Education</p>\r\n"
+    - 2
+    - 4
+    - '2013-02-09 19:40:56.823649'
+    - '2013-02-09 19:40:56.823649'
+  - - 12
+    - elevator_3.png
+    - What I am
+    - ! "<p>What I am</p>\r\n"
+    - 3
+    - 4
+    - '2013-02-09 19:41:20.064664'
+    - '2013-02-09 19:41:20.064664'
+
+---
+users:
+  columns:
+  - id
+  - name
+  - hashed_password
+  - salt
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - graham
+    - 115161d9b456c309b373a9c89022af83b6c6b60c9fd0a1e5f41fad6c17c14e30
+    - '701090849048800.6899114422147297'
+    - '2013-02-06 15:42:44.643071'
+    - '2013-02-06 15:45:08.778663'
+
+---
+blogs:
+  columns:
+  - id
+  - title
+  - post
+  - published
+  - created_at
+  - updated_at
+  - posted_at
+  - featured
+  records: 
+  - - 3
+    - Positives of Blogging
+    - ! "<p class=\"p1\">Well hello friends, you guys found me!! Congratulations,
+      I wish I could give you some sort of reward like awesome stickers or 10% off
+      your next spa but I can only give you a little chat.&nbsp;</p>\r\n\r\n<p class=\"p2\">&nbsp;</p>\r\n\r\n<p
+      class=\"p1\">As I&#39;m starting this new adventure into the blogosphere, I
+      wanted to discuss the main reason why I decided to privy everyone with my thoughts
+      and feelings. &nbsp;Blogging is going to improve my communication skills, having
+      to write down my thoughts has this great little side effect of having to structure
+      them in a semi coherent way so that other people can actually understand what
+      I&#39;m trying to say.&nbsp;</p>\r\n\r\n<p class=\"p2\">&nbsp;</p>\r\n\r\n<p
+      class=\"p1\">In my experience, it seems that when you&#39;re starting out as
+      a developer, your communication skills takes a backseat to being able to build&nbsp;elegant
+      functionality. And don&#39;t get me wrong, programming skills are the quintessential
+      skill necessary to be a developer, &nbsp;but after working on a few small teams
+      you start to understand how communication minimize your costs and creates a
+      far far better product.&nbsp;</p>\r\n\r\n<p class=\"p2\">&nbsp;</p>\r\n\r\n<p
+      class=\"p1\">Customer interaction is the simplest example of this, allowing
+      vibrant conversation with your customer allows him to explain his needs to you
+      and cuts costs by pointing your development team closer to the right direction.
+      Listen to the Shop Talk Show podcast, they describe their experience as designers
+      leaving customer meetings feeling that &nbsp;&quot;They just don&#39;t understand
+      what I am trying to say&quot; which really means &quot;I couldn&#39;t convey
+      my thoughts well enough to make him understand me&quot;. &nbsp;This might seem
+      like a small deal, but it&#39;s always so difficult on any development project
+      to able to grasp the final product that being even 5% closer to the final product
+      can remove 5% of incorrect implementation and then additional cost for reimplementation.
+      &nbsp;This is an abstract&nbsp;example, but classic computer science books like
+      &quot;Mythical Man-Month&quot;, &quot;Code Complete&quot; or any agile book
+      contain actual data about this subject.</p>\r\n\r\n<p class=\"p2\">&nbsp;</p>\r\n\r\n<p
+      class=\"p1\">One of the major concepts in agile development is to have small
+      interactions of your product which allows your customer to see the product very
+      early on. &nbsp;You are showing your customer a small preview of the product,
+      so your customer can tell you how wrong you are and you can fix it.&nbsp;This
+      idea is based on the knowledge that the customer does not know what he wants
+      and a visual representation will allow him to communicate his actual needs faster
+      and allow us to build a better product. &nbsp;</p>\r\n\r\n<p class=\"p2\">&nbsp;</p>\r\n\r\n<p
+      class=\"p1\">In your team, being able to properly communicate with everyone
+      just makes life easier. Having your graphic designer explain which exact pixel
+      on the 1800px by 2000px screen is wrong, or knowing why your sales guy is mad
+      at you for being late on an a fake product that he promised a customer 5 years
+      ago, or explaining to your project manager why a simple change is not really
+      that simple and is useless. It avoids those &quot;oh shit..&quot; moments when
+      your team finishes something and everyone didn&#39;t think about how the legacy
+      data was gonna get in.&nbsp;</p>\r\n\r\n<p class=\"p2\">&nbsp;</p>\r\n\r\n<p
+      class=\"p1\">Communication makes you a more valuable member of any team, and
+      from the slew of interviews that I have done over the past year, it&#39;s very
+      noticeable on first impressions. These companies need to know how I can help
+      and why they should sacrifice 2 goats to get me to join their company.</p>\r\n\r\n<p
+      class=\"p2\">&nbsp;</p>\r\n\r\n<p class=\"p1\">In conclusion, communication
+      = good</p>\r\n\r\n<p class=\"p1\">Graham</p>\r\n"
+    - true
+    - '2013-02-06 21:12:09.547976'
+    - '2013-02-08 20:42:23.170746'
+    - '2013-02-08 20:42:23.170608'
+    - true
+  - - 4
+    - Why I hate blogging and myself a bit for doing it…
+    - ! "<p>This was the actual first blog post that I wanted to write, but instead
+      I started on a positive note so that I didn&#39;t get into a habit of flaming
+      things.&nbsp;</p>\r\n\r\n<p>But writing negative blog post is so much easier
+      and it seems to flow from my fingertips like a oyster crafting this magnificent
+      black pearl of destruction.</p>\r\n\r\n<p><span style=\"font-size: 13px; line-height:
+      1.6em;\">Okay so blogging, it&#39;s great right? We communicate to an audience
+      our personal thoughts about topics and they get to understand our idea and expand
+      their own opinions. Everybody wins right? No no nooo, lots of people lose.</span></p>\r\n\r\n<p><span
+      style=\"font-size: 13px; line-height: 1.6em;\">The main reason that I don&#39;t
+      like blogging is that the majority of blogs lower the quality of the internet.
+      Yes, I don&#39;t like blogs because the internet as a whole gets worse. The
+      internet is this amazing thing that everybody takes for granted, we abuse it
+      and my generation doesn&#39;t really understand how different and better our
+      lives are from everyone ever before us. And it&#39;s still so young and blossoming
+      into this beautiful flower and I&#39;m so obvious that everyone in the future
+      will see this as one the the most important moments in human history. This concept
+      of having unlimited information out your fingertips, it&#39;s so unthinkable
+      and now commonplace, that you are able to communicate to anyone in the world,
+      that you can find information about anything, that you can find direction to
+      anywhere. Think about it, really really think about, it&#39;s so amazing, it
+      makes me want to cry a bit.</span></p>\r\n\r\n<p><span style=\"font-size: 13px;
+      line-height: 1.6em;\">And the reason that I don&#39;t like the majority of blogging
+      is that I feel that they have this negative effect on the internet by devaluing
+      all the useful information out there. I know this might sound silly because
+      I don&#39;t have to follow those people and I can just follow actual useful
+      blogs. But because of the mass amount of useless information out there, some
+      of it still gets through the cracks and it&#39;s difficult to know what is what.
+      Maybe it&#39;s due to great UI/UX design, great marketing skills or some SEO
+      magic but I still see it all over the place. It&#39;s like if the internet was
+      a digital map and we put our coordinates of buried treasures on the map. Then
+      our devious nemesis Shredder decides to mess up our map by putting a million
+      fake coordinates so that we don&#39;t know were anything is anymore. It&#39;s
+      hard to know what to trust anymore, and the obvious answer is that I should
+      think critically about everything that I read and take it all with a grain of
+      salt. But it&#39;s so tiring and waste of time to do all these things.&nbsp;</span></p>\r\n\r\n<p><span
+      style=\"font-size: 13px; line-height: 1.6em;\">Now certain things have help
+      the situation:</span></p>\r\n\r\n<p><span style=\"font-size: 13px; line-height:
+      1.6em;\">1. I would like to say a big thank you to Facebook for moving all that
+      needless personal blogging to their application. Facebook has removed the need
+      for most people to have a personal blog and they can just express and show their
+      personal opinions about cats there.&nbsp;</span></p>\r\n\r\n<p><span style=\"font-size:
+      13px; line-height: 1.6em;\">2. Twitter has evolved from this micro blogging
+      site to a site were people share links to great content. So it&#39;s helps the
+      process to find new content.</span></p>\r\n\r\n<p><span style=\"font-size: 13px;
+      line-height: 1.6em;\">3. Sites in the stack exchange family who are trying to
+      change forums to useful Question and Answer websites were people can vote on
+      which questions were valuable and which answer is the clearest. It makes my
+      life as a programmer easier, but I also find their other websites to be great
+      learning tools.</span></p>\r\n\r\n<p><span style=\"font-size: 13px; line-height:
+      1.6em;\">So to the aliens that crawl the internet in the future and find this
+      blog post, I apologize for all the crap that&#39;s out there, but I hope you
+      know that we&#39;re trying to make it better and we&#39;re not civilization
+      isn&#39;t negative as the forums make us out to be.</span></p>\r\n\r\n<p><span
+      style=\"font-size: 13px; line-height: 1.6em;\">On that note, I will try to keep
+      my blog to a small audience until I feel that it&#39;s actually making the internet
+      a better place. But if I did just waste your time, I&#39;m really sorry.</span></p>\r\n"
+    - true
+    - '2013-02-08 18:23:32.973440'
+    - '2013-02-08 22:11:51.045546'
+    - '2013-02-08 22:11:51.045174'
+    - true
+  - - 6
+    - welcome
+    - ! "<p>You found me!!! I&#39;m Graham and I work on web and mobile projects to
+      try to make the internet a better and more beautiful place. I did a bunch of
+      schooling for Computer Science and then started doing freelance projects.&nbsp;</p>\r\n\r\n<p>This
+      website is now my home base to write my opinions and proudly showcase completed
+      projects and jobs.&nbsp;</p>\r\n\r\n<p>If you need some help on projects or
+      have something cool that you want to build, contact me and we can talk about
+      it.</p>\r\n"
+    - false
+    - '2013-02-08 18:34:44.599683'
+    - '2013-02-08 19:16:24.458258'
+    - 
+    - true

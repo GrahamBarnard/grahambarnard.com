@@ -97,11 +97,13 @@ h1, h2, h3, h4, h5, h6 {
 .social-network.skype{ background-position: -924px -42px}
 .social-network.facebook{ background-position: -210px -42px}
 .social-network.linkedin{ background-position: -504px -42px}
+.social-network.email { background-position: -756px -42px; }
 
 .social-network.twitter:hover,.active .social-network.twitter{ background-position: -1134px 0}
 .social-network.skype:hover,.active .social-network.skype{ background-position: -924px 0}
 .social-network.facebook:hover,.active .social-network.facebook{ background-position: -210px 0}
 .social-network.linkedin:hover,.active .social-network.linkedin{ background-position: -504px 0}
+.social-network.email:hover, .active .social-network.email { background-position: -756px 0; }
 
 .align-right { text-align: right; }
 .align-left { text-align: left; }

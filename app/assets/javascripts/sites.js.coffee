@@ -15,12 +15,8 @@
   # , 1000
 
   $(document).ready ->
-    $(".fancybox").fancybox({
-      ajax : {
-    	  type	: "GET"
-        # onComplete : ->
-        #           $('#fancybox-frame').load ->
-        #             $('#fancybox-content').height($(this).contents().find('body').height())
-        #             $('#fancybox-content').height($(this).contents().find('body').width())
-      }
-    })
+     $(".fancybox").fancybox({
+       ajax : {
+         "type"  : "GET"
+       }
+     })
