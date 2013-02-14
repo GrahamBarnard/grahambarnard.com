@@ -2,14 +2,14 @@
 @import "fancybox";
 
 /* Created by Graham Barnard */
-body { font-family: 'Dosis', sans-serif; background: #F0F0F0; margin: -8px 8px 8px; }
+body { font-family: 'Dosis', sans-serif; background: url(image_path('redox_01_@2X.png')); margin: -8px 8px 8px; }
 
 a, a:hover { text-decoration: none; }
 
 .website {
-  width:80%; 
+  width:70%; 
   margin: 0 auto;
-  padding:18px 20px 10px;
+  padding: 10px 5%;
   background: white;
   position:relative;
   
@@ -83,12 +83,6 @@ h1, h2, h3, h4, h5, h6 {
 	width: 32px; 
 	height: 32px; 
 	background-position-y: -42px; 
-	-webkit-transition:all 0.2s ease;
-	-moz-transition:all 0.2s ease;
-	-o-transition:all 0.2s ease;
-	-ms-transition:all 0.2s ease;
-	transition:all 0.2s ease;
-
 	cursor:pointer;
 }
 
@@ -131,4 +125,9 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 500px;
   width: 800px;
   height: 500px;
+}
+
+.degree {
+  color: gray;
+  font-size: 18px;
 }

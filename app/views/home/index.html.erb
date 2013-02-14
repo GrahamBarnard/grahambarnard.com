@@ -1,11 +1,14 @@
-<h2 class="header-title">Hi, Welcome to my Web Dev Stuff</h2>
+<h1>Graham Barnard <span class="degree">BSC</span></h1>
   
-  <div class="row-fluid">
-    <article id="welcome">
+  <div class="row">
+    <article id="welcome" class="span7">
       <% @welcome.each do |welcome| %>
         <%= raw welcome.post %>
       <% end %>
     </article>
+    <aside class="span3 offset1">
+      <p>Bachelor in Computer Science</p>
+      <p>3 Year Technical Program in CS</p></aside>
   </div>
 
 
