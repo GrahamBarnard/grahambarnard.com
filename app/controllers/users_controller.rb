@@ -1,6 +1,4 @@
 class UsersController < InheritedResources::Base
-  skip_before_filter :authorize
-
   def create
     @user = User.new(params[:user])
     
