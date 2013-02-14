@@ -1,6 +1,6 @@
 class DropWebsiteImagesTable < ActiveRecord::Migration
   def up
-    drop_table :website_images
+    # drop_table :website_images
   end
 
   def down
