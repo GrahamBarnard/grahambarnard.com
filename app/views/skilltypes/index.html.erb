@@ -1,0 +1,23 @@
+<h1>Listing skilltypes</h1>
+
+<table  class="table">
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @skilltypes.each do |skilltype| %>
+  <tr>
+    <td><%= skilltype.name %></td>
+    <td><%= link_to 'Show', skilltype %></td>
+    <td><%= link_to 'Edit', edit_skilltype_path(skilltype) %></td>
+    <td><%= link_to 'Destroy', skilltype, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Skilltype', new_skilltype_path %>

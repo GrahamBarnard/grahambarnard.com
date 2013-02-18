@@ -1,4 +1,5 @@
 class UsersController < InheritedResources::Base
+  
   def create
     @user = User.new(params[:user])
     
