@@ -4,6 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Skilltype</th>
+    <th>Rating</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +14,7 @@
   <tr>
     <td><%= skill.name %></td>
     <td><%= skill.skilltype_id %></td>
+    <td><%= skill.rating %></td>
     <td><%= link_to 'Show', skill %></td>
     <td><%= link_to 'Edit', edit_skill_path(skill) %></td>
     <td><%= link_to 'Destroy', skill, confirm: 'Are you sure?', method: :delete %></td>
