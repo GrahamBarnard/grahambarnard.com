@@ -75,7 +75,8 @@ $('.scroller').click(function(e) {
 				
 				//Add Tooltips
 				$('.tips').tooltip();
-				$('.lightbox').unbind("click").fancybox();
+				$('.lightbox').unbind("click").fancybox({'type' : 'iframe', 'width' : '85%', 'height' : '95%'}
+        );
 				
 			}else{ 									//scripts for mobile only
 				
@@ -93,3 +94,39 @@ $('.scroller').click(function(e) {
 	$(window).resize(function() { //execution on window resizing
 		conditionalScripts();
 	});
+	
+	//Showing portfolio items
+	$('#portfolio-items .more-info').click(function(e){
+		e.preventDefault();
+		var targetId = $(this).attr('href');
+		$('#portfolio-items, #portfolio-filters').hide();
+		$(targetId+', #portfolio-back').hide().removeClass('hidden').fadeIn('400', 'easeInOutCubic');
+	});
+	
+	$('#portfolio-back').click(function(e){
+		e.preventDefault();
+		$('.portfolioitem-content:visible, #portfolio-back').hide().addClass('hidden');
+		$('#portfolio-items, #portfolio-filters').fadeIn('400', 'easeInOutCubic');
+		var documentBody = (($.browser.chrome)||($.browser.safari)) ? document.body : document.documentElement;
+		$(documentBody).animate({scrollTop: $('#portfolio').offset().top}, 1000,'easeInOutCubic');
+	});
+	
+	//portfolio item nav
+	$('.portfolioitem-content .pager a').click(function(e){
+		e.preventDefault();
+		var targetId = $(this).attr('href');
+		$('.portfolioitem-content:visible').hide().addClass('hidden');
+		$(targetId).hide().removeClass('hidden').fadeIn('400', 'easeInOutCubic');
+	});
+	
+	
+	//blogitem hover
+	$(document).on("mouseenter", '.blogitem, .portfolioitem', function(){
+		$('.blogitem-hoverinfo, .portfolioitem-hoverinfo', this).stop(true, true).fadeIn('200', 'easeInOutCubic');
+	});
+	
+	$(document).on("mouseleave", '.blogitem, .portfolioitem', function(){
+		$('.blogitem-hoverinfo, .portfolioitem-hoverinfo', this).stop(true, true).fadeOut('200', 'easeInOutCubic');
+	});
+	
+	

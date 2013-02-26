@@ -26,6 +26,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :previewimageurl %><br />
+    <%= f.text_field :previewimageurl %>
+  </div>
+
+  <div class="field">
     <%= f.label :published %>
     <%= f.check_box :published %>
   </div>
@@ -34,6 +39,12 @@
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </div>
+  
+  <div class="field">
+    <%= f.label :shortdescription %><br />
+    <%= f.text_field :shortdescription %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

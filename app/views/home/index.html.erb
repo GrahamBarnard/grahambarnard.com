@@ -28,7 +28,7 @@ If you need some help on a project or have something cool that you want to build
     	</div><!--/section--> 
 
       <div class="section" id="personal-information">
-        <h2 class="section-title"><span class="glyphicons user"><i></i></span>Personal Information<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
+        <h2 class="section-title"><span class="glyphicons white user"><i></i></span>Personal Information<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
 
   		  <div class="row">
   		  	<span class="clear"></span>
@@ -60,7 +60,7 @@ If you need some help on a project or have something cool that you want to build
     	</div><!--/section-->
 
     		<div class="section" id="employment">
-  		  	<h2 class="section-title"><span class="glyphicons share_alt"><i></i></span>Employment<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
+  		  	<h2 class="section-title"><span class="glyphicons white share_alt"><i></i></span>Employment<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
   	
   		  	<div class="timeline">
   		
@@ -124,7 +124,7 @@ If you need some help on a project or have something cool that you want to build
 	
 	
   	  	<div class="section" id="education">
-  		  	<h2 class="section-title"><span class="glyphicons certificate"><i></i></span>Education<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
+  		  	<h2 class="section-title"><span class="glyphicons white certificate"><i></i></span>Education<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
   	
   		  	<div class="timeline">
   	  			 <div class="timeline-item">
@@ -159,7 +159,7 @@ If you need some help on a project or have something cool that you want to build
   	  	</div><!--/section-->
 
   	  	<div class="section skills" id="skills">
-  	  		<h2 class="section-title"><span class="glyphicons cogwheels"><i></i></span>Skills<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
+  	  		<h2 class="section-title"><span class="glyphicons white cogwheels"><i></i></span>Skills<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
 
           <% if @skills %>
             <% @skills.each do |skill| %>
@@ -189,7 +189,7 @@ If you need some help on a project or have something cool that you want to build
   	  	</div><!--/section-->
 
   	    	<div class="section" id="testimonials">
-  			  	<h2 class="section-title"><span class="glyphicons comments"><i></i></span>Testimonials<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
+  			  	<h2 class="section-title"><span class="glyphicons white comments"><i></i></span>Testimonials<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
 	  	
   			  	<div class="testimonial">
   			  	  <div class="media">
@@ -214,11 +214,10 @@ If you need some help on a project or have something cool that you want to build
   						</div>
   					</div>
   				</div>
-
   			</div><!--/section-->
 	
   			<div class="section hobbies" id="hobbies">
-  		  		<h2 class="section-title"><span class="glyphicons heart_empty"><i></i></span>Hobbies<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
+  		  		<h2 class="section-title"><span class="glyphicons white heart_empty"><i></i></span>Hobbies<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
 	  	
   			  	<div class="row">
   			  		<div class="span9">
@@ -231,15 +230,60 @@ If you need some help on a project or have something cool that you want to build
   		  	</div><!--/section-->
   	
   		  		<div class="section clearfix noprint" id="portfolio">
-      				<h2 class="section-title"><span class="glyphicons show_thumbnails"><i></i></span>Portfolio<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
+      				<h2 class="section-title"><span class="glyphicons white show_thumbnails"><i></i></span>Portfolio<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
+              <div class="row" id="portfolio-items">
+    				    <!-- Featured Portfolio items -->
+              <% unless @websites.empty? %>
+                <% @websites.each_with_index do |website, index| %>
+                  <div class="span3 portfolioitem portfolio-type1">
+                    <%= image_tag website.previewimageurl %>
+                    <div class="portfolioitem-hoverinfo">
+                      <%= raw website.shortdescription %>                    
+                      
+                      <div class="portfolioitem-actions">
+                        <% if website.url? %>
+                          <a href="<%= website.url %>" class="tips img-circle lightbox" title="Preview website" data-placement="bottom" data-fancybox-group="portfolioimages"><span class="glyphicons white zoom_in"><i></i></span></a>
+                        <% end %>
+      								
+        								<a href="#portfolioitem-<%= index %>" class="tips more-info img-circle" title="View Project" data-placement="bottom"><span class="glyphicons white share"><i></i></span></a>
+        							</div>
+                    </div>
+                    
+        					</div>
+                <% end %>
+              <% end %>
+    					</div> <!-- Featured Portfolio items -->
 
+              	<div class="row" id="full-portfolio-items">
+        					<div class="span9">
 
+        						<a href="#" class="btn btn-primary hidden" id="portfolio-back">&larr; Back to Portfolio List</a>
+        						
+                    <% unless @websites.empty? %>
+                      <% @websites.each_with_index do |website, index| %>
+            						<div class="portfolioitem-content hidden" id="portfolioitem-<%= index %>">
+            							<%= image_tag website.imageurl %>
+            							<h2 class="primary-color"><%= website.name %></h2>
+            							<div>
+            							  <%= raw website.description %>
+            							</div>
 
+            							<ul class="pager">
+            								<li class="previous"><a href="#portfolioitem-<%= (index - 1) % @websites.size %>" class="">&larr; Previous</a></li>
+            								<li class="next"><a href="#portfolioitem-<%= (index - 1) % @websites.size %>" class="">Next &rarr;</a></li>
+            							</ul>
+
+            						</div>
+          						
+                      <% end %>
+                    <% end %>
+        				  </div><!--/span9-->
+        			  </div><!--/row-->
       		  </div><!--/section-->
 		
 		
       		<div class="section noprint" id="blog">
-      			<h2 class="section-title"><span class="glyphicons pencil"><i></i></span>Blog<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
+      			<h2 class="section-title"><span class="glyphicons white pencil"><i></i></span>Blog<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
 
       			<!-- Featured Blog items -->
       			<% @posts.each do |post| %>
