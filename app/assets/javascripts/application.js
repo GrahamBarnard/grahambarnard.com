@@ -82,7 +82,7 @@ $('.scroller').click(function(e) {
 				
 				//Remove Tooltips
 				$('.tips').tooltip('destroy');
-				$('.lightbox').unbind("click").photoSwipe();
+				$('.lightbox').unbind("click");
 
 			}
 		}
@@ -90,6 +90,7 @@ $('.scroller').click(function(e) {
 		viewPortContext = newViewPortContext;
 	}
 	conditionalScripts(); //first execution
+	
 	
 	$(window).resize(function() { //execution on window resizing
 		conditionalScripts();
