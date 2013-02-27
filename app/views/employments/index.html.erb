@@ -1,0 +1,33 @@
+<h1>Listing employments</h1>
+
+<table class="table">
+  <tr>
+    <th>Start date</th>
+    <th>Finish date</th>
+    <th>Position</th>
+    <th>Description</th>
+    <th>Website</th>
+    <th>Published</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @employments.each do |employment| %>
+  <tr>
+    <td><%= employment.start_date %></td>
+    <td><%= employment.finish_date %></td>
+    <td><%= employment.position %></td>
+    <td><%= employment.description %></td>
+    <td><%= employment.website %></td>
+    <td><%= employment.published %></td>
+    <td><%= link_to 'Show', employment %></td>
+    <td><%= link_to 'Edit', edit_employment_path(employment) %></td>
+    <td><%= link_to 'Destroy', employment, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Employment', new_employment_path %>

@@ -6,6 +6,16 @@
 <table class="table">
   <tr>
     <th>Name</th>
+    <th>Avatar</th>
+    <th>Fullname</th>
+    <th>Title</th>
+    <th>Website</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Welcome</th>
+    <th>Twitter</th>
+    <th>Github</th>
+    <th>Linkedin</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,6 +24,16 @@
 <% @users.each do |user| %>
   <tr>
     <td><%= user.name %></td>
+    <td><%= user.avatar %></td>
+    <td><%= user.fullname %></td>
+    <td><%= user.title %></td>
+    <td><%= user.website %></td>
+    <td><%= user.email %></td>
+    <td><%= user.phone %></td>
+    <td><%= user.welcome %></td>
+    <td><%= user.twitter %></td>
+    <td><%= user.github %></td>
+    <td><%= user.linkedin %></td>
     <td><%= link_to 'Edit User', edit_user_path(user) %></td>
     <td><%= link_to 'Delete User', user, confirm: 'Are you sure?', method: :delete %></td>
   </tr>

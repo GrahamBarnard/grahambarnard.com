@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130226184928) do
+ActiveRecord::Schema.define(:version => 20130227155037) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -21,6 +21,26 @@ ActiveRecord::Schema.define(:version => 20130226184928) do
     t.datetime "updated_at", :null => false
     t.datetime "posted_at"
     t.boolean  "featured"
+  end
+
+  create_table "educations", :force => true do |t|
+    t.date     "start_date"
+    t.date     "finish_date"
+    t.string   "school"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "employments", :force => true do |t|
+    t.date     "start_date"
+    t.date     "finish_date"
+    t.string   "position"
+    t.text     "description"
+    t.string   "website"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.boolean  "published"
   end
 
   create_table "skills", :force => true do |t|
@@ -37,12 +57,31 @@ ActiveRecord::Schema.define(:version => 20130226184928) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "testimonials", :force => true do |t|
+    t.string   "author"
+    t.string   "avatar"
+    t.boolean  "published"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "hashed_password"
     t.string   "salt"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "avatar"
+    t.string   "fullname"
+    t.string   "title"
+    t.string   "website"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "welcome"
+    t.string   "twitter"
+    t.string   "github"
+    t.string   "linkedin"
   end
 
   create_table "webimages", :force => true do |t|

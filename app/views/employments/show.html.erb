@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start date:</b>
+  <%= @employment.start_date %>
+</p>
+
+<p>
+  <b>Finish date:</b>
+  <%= @employment.finish_date %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @employment.position %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @employment.description %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @employment.website %>
+</p>
+<p>
+  <b>Published:</b>
+  <%= @employment.published %>
+</p>
+
+<%= link_to 'Edit', edit_employment_path(@employment) %> |
+<%= link_to 'Back', employments_path %>

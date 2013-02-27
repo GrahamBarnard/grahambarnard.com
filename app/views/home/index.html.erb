@@ -3,26 +3,24 @@
     <div class="section first-section" id="about-me">
       <div class="row author">
         <div class="span2">
-          <%= image_tag "grahambarnard.jpeg", "class" => "img-rounded" %>
+          <%= image_tag @user.avatar, "class" => "img-rounded" %>
         </div>
         <div class="span7">
-          <h1>Graham Barnard</h1>
-  		   	<h2 class="primary-color">Web & Mobile Developer</h2>
+          <h1><%= @user.fullname %></h1>
+  		   	<h2 class="primary-color"><%= @user.title %></h2>
   		   </div>
   		 </div>
  
   		 <div class="well">
-  			<h3>You found me!</h3>
-  			<p class="lead">Welcome to my site, I'm a passionate web and mobile programmer. This is my homebase to write my opinions and showcase past work that I have done. I'm currently looking for opportunities that will allow me to learn new technologies or strengthen my skills. <br /><br />
-If you need some help on a project or have something cool that you want to build, contact me and we can talk about it. </p>
-        </div>
+  		   <%= raw @user.welcome %>
+      </div>
         
       	<div class="social-media noprint">
 					<h5>Follow me</h5>
 					<div>
-						<div class="tips icon-btn" title="Github" data-placement="bottom"><a href="https://github.com/GrahamBarnard" target="_blank" class="glyphicons white github"><i></i></a></div>
-						<div class="tips icon-btn" title="Twitter" data-placement="bottom"><a href="https://twitter.com/grahambarnard" target="_blank" class="glyphicons white twitter"><i></i></a></div>
-						<div class="tips icon-btn" title="Linkedin" data-placement="bottom"><a href="http://ca.linkedin.com/in/barnardgraham/" target="_blank" class="glyphicons white linked_in"><i></i></a></div>
+						<div class="tips icon-btn" title="Github" data-placement="bottom"><a href="<%= @user.github %>" target="_blank" class="glyphicons white github"><i></i></a></div>
+						<div class="tips icon-btn" title="Twitter" data-placement="bottom"><a href="<%= @user.twitter %>" target="_blank" class="glyphicons white twitter"><i></i></a></div>
+						<div class="tips icon-btn" title="Linkedin" data-placement="bottom"><a href="<%= @user.linkedin %>" target="_blank" class="glyphicons white linked_in"><i></i></a></div>
 					</div>
 				</div>		
     	</div><!--/section--> 
@@ -35,7 +33,7 @@ If you need some help on a project or have something cool that you want to build
         	<div class="infoline span9">
             <div class="row">
   		  	    <div class="span2 muted">Email</div>
-  		  	    <div class="span7"><a href="mailto:barnard.graham@gmail.com">barnard.graham@gmail.com</a></div>
+  		  	    <div class="span7"><a href="mailto:<%= @user.email %>"><%= @user.email %></a></div>
   		  	  </div>
   		  	</div>
   	
@@ -47,14 +45,16 @@ If you need some help on a project or have something cool that you want to build
   			  	  <div class="span7">514-992-4515</div>
   			    </div>
   			  </div>
+  			  
   		  	<span class="clear"></span>
   	
         	<div class="infoline span9 last">
         	  <div class="row">
   			  	  <div class="span2 muted">Website</div>
-  			  	  <div class="span7"><a href="http://www.grahambarnard.com" title="">grahambarnard.com</a></div>
+  			  	  <div class="span7"><a target="_blank" href="<%= @user.website %>" title=""><%= @user.website %></a></div>
   			    </div>
   			  </div>
+  			  
   		  	<span class="clear"></span>
   	  	</div>
     	</div><!--/section-->
@@ -62,100 +62,63 @@ If you need some help on a project or have something cool that you want to build
     		<div class="section" id="employment">
   		  	<h2 class="section-title"><span class="glyphicons white share_alt"><i></i></span>Employment<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
   	
-  		  	<div class="timeline">
-  		
-  	  			 <div class="timeline-item">
-  	  			 	<div class="timeline-item-date">2011 - 2013</div>
-  	  			 	<div class="timeline-item-trigger"><span class="glyphicons white circle_minus" data-toggle="collapse" data-target="#position1"><i></i></span></div>
-  	  			 	<div class="timeline-arrow"><i></i></div>
-  	  			 	<div class="timeline-item-content">
-  						<h3 class="timeline-item-title" data-toggle="collapse" data-target="#position1">Intermediate Web Developer @ Walsh Integrated</h3>
-  						<div class="collapse in" id="position1">
-  							<p><small class="muted">from December 2011 to January 2013</small></p>
-  							<h4 class="media-heading primary-color"></h4>
-  							<p>Redesign and Maintain a CodeIgniter Backend System<br />
-                Create REST Web Services for new mobile applications<br />
-                Maintain 2 android mobile projects</p>
-  							<p><a href="http://www.walshintegrated.com" target="_blank" title="Walsh Portal" class="noprint">&rarr; View website</a></p>
-  						</div>
-  					</div>
-  				 </div><!--/timeline-item--> 
-  				 <span class="clear"></span>
-		 
-  				 <div class="timeline-item">
-  	  			 	<div class="timeline-item-date">2011</div>
-  	  			 	<div class="timeline-item-trigger"><span class="glyphicons white circle_plus" data-toggle="collapse" data-target="#position2"><i></i></span></div>
-  	  			 	<div class="timeline-arrow"><i></i></div>
-  	  			 	<div class="timeline-item-content">
-  						<h3 class="timeline-item-title" data-toggle="collapse" data-target="#position2">Freelance Development Work</h3>
-  						<div class="collapse" id="position2">
-  							<p><small class="muted">from 2011</small></p>
-  							<h4 class="media-heading primary-color"></h4>
-  							<p>Developed in a wide variety of control management system: Wordpress, Joomla, Magento, ExpressionEngine, etc<br />
-                Front End Development using HTML5, CSS3 and Javascript/jQuery</p>	
-  						</div>
-  					</div>
-  				 </div><!--/timeline-item--> 
-  				 <span class="clear"></span>
-
-  				 <div class="timeline-item">
-  	  			 	<div class="timeline-item-date">2007</div>
-  	  			 	<div class="timeline-item-trigger"><span class="glyphicons white circle_plus" data-toggle="collapse" data-target="#position3"><i></i></span></div>
-  	  			 	<div class="timeline-arrow"><i></i></div>
-  	  			 	<div class="timeline-item-content">
-  						<h3 class="timeline-item-title" data-toggle="collapse" data-target="#position3">Automation Scripter @ Presagis</h3>
-  						<div class="collapse" id="position3">
-  							<p><small class="muted">2007</small></p>
-  							<h4 class="media-heading primary-color">Automation Scripter and Software Tester</h4>
-  							<p>Created automation scripts using the SilkTest language.<br />
-                  Designed and developed test documentation.<br />
-                  Software Tester for multiple products.<br />
-                </p>	
-                <p><a href="http://http://www.presagis.com/" target="_blank" title="Presagis" class="noprint">&rarr; View website</a></p>
-  						</div>
-  					</div>
-  				 </div><!--/timeline-item--> 
-  				 <span class="clear"></span>
-
-
-
-  		  	</div><!--/timeline --> 
+  	      <% unless @employments.empty? %>
+  		  	  <div class="timeline">
+              <% @employments.each_with_index do |employment, index| %>
+                <div class="timeline-item">
+       	  		    <div class="timeline-item-date"><%= employment.start_date.year %>
+       	  			 	  <% unless employment.start_date.year == employment.finish_date.year %>
+       	  			 	    -  <%= employment.finish_date.year %>
+       	  			 	  <% end %>
+       	  			 	</div>
+       	  			 <div class="timeline-item-trigger"><span class="glyphicons white <%= if index == 0 then "circle_minus" else "circle_plus" end %>" data-toggle="collapse" data-target="#education<%= index %>"><i></i></span></div>
+       	  			 	<div class="timeline-arrow"><i></i></div>
+       	  			 	<div class="timeline-item-content">
+       						<h3 class="timeline-item-title" data-toggle="collapse" data-target="#education<%= index %>"><%= employment.position %></h3>
+       						<div class="collapse <%= if index == 0 then "in" end %>" id="education<%= index %>">
+       							<p><small class="muted">from <%=  employment.start_date.strftime("%B %Y") %> to <%= employment.finish_date.strftime("%B %Y") %></small></p>
+       							<h4 class="media-heading primary-color"></h4>
+       							<%= raw employment.description %>
+       							<% if employment.website? %>
+       							  <p><a href="<%= employment.website %>" target="_blank" title="View Website" class="noprint">&rarr; View website</a></p>
+      							<% end %>
+      							
+       						</div>
+       					</div>
+       				 </div><!--/timeline-item--> 
+       				 <span class="clear"></span>
+     	  			
+              <% end %>
+            </div><!--/timeline --> 
+            <span class="clear"></span>
+          <% end %>
   		</div><!--/section-->
 	
 	
   	  	<div class="section" id="education">
   		  	<h2 class="section-title"><span class="glyphicons white certificate"><i></i></span>Education<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
   	
-  		  	<div class="timeline">
-  	  			 <div class="timeline-item">
-  	  			 	<div class="timeline-item-date">2008 - 2010</div>
-  	  			 	<div class="timeline-item-trigger"><span class="glyphicons white circle_plus" data-toggle="collapse" data-target="#education1"><i></i></span></div>
-  	  			 	<div class="timeline-arrow"><i></i></div>
-  	  			 	<div class="timeline-item-content">
-  						<h3 class="timeline-item-title" data-toggle="collapse" data-target="#education1">University of Concordia</h3>
-  						<div class="collapse" id="education1">
-  							<p><small class="muted">2008 - 2010</small></p>
-  							<h4 class="media-heading primary-color">Bachelor of Computer Science Specializing In Web Services</h4>
-  						</div>
-  					</div>
-  				 </div><!--/timeline-item--> 
-  				 <span class="clear"></span>
-		 
-  				  <div class="timeline-item">
-  	  			 	<div class="timeline-item-date">2005-2008</div>
-  	  			 	<div class="timeline-item-trigger"><span class="glyphicons white circle_plus" data-toggle="collapse" data-target="#education2"><i></i></span></div>
-  	  			 	<div class="timeline-arrow"><i></i></div>
-  	  			 	<div class="timeline-item-content">
-  						<h3 class="timeline-item-title" data-toggle="collapse" data-target="#education2">CEGEP John Abbott College</h3>
-  						<div class="collapse" id="education2">
-  							<p><small class="muted">2005-2008</small></p>
-  							<h4 class="media-heading primary-color">DCS, Computer Science</h4>
-  						</div>
-  					</div>
-  				 </div><!--/timeline-item--> 
-  				 <span class="clear"></span>
-  		  	</div><!--/timeline --> 
-	
+  	      <% unless @educations.empty? %>
+  		  	  <div class="timeline">
+              <% @educations.each_with_index do |education, index| %>
+                 <div class="timeline-item">
+       	  			 	<div class="timeline-item-date"><%= education.start_date.year %> - <%= education.finish_date.year %></div>
+       	  			 	<div class="timeline-item-trigger"><span class="glyphicons white <%= if index == 0 then "circle_minus" else "circle_plus" end %>" data-toggle="collapse" data-target="#education<%= index %>"><i></i></span></div>
+       	  			 	<div class="timeline-arrow"><i></i></div>
+       	  			 	<div class="timeline-item-content">
+       						<h3 class="timeline-item-title" data-toggle="collapse" data-target="#education<%= index %>"><%= education.school %></h3>
+       						<div class="collapse <%= if index == 0 then "in" end %>" id="education<%= index %>">
+       							<p><small class="muted">from <%=  education.start_date.strftime("%B %Y") %> to <%= education.finish_date.strftime("%B %Y") %></small></p>
+       							<h4 class="media-heading primary-color"><%= raw education.description %></h4>
+       						</div>
+       					</div>
+       				 </div><!--/timeline-item--> 
+       				 <span class="clear"></span>
+     	  			
+              <% end %>
+            </div><!--/timeline --> 
+            <span class="clear"></span>
+          <% end %>
   	  	</div><!--/section-->
 
   	  	<div class="section skills" id="skills">
@@ -191,29 +154,25 @@ If you need some help on a project or have something cool that you want to build
   	    	<div class="section" id="testimonials">
   			  	<h2 class="section-title"><span class="glyphicons white comments"><i></i></span>Testimonials<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
 	  	
-  			  	<div class="testimonial">
-  			  	  <div class="media">
-  			  	    <%= image_tag "paul_hamilton.jpeg", "class" => "media-object pull-left" %>
-    					  <div class="media-body">
-    				  	  <blockquote>
-    						    <p>Graham was a pleasure to work with. He showed patience and insight in addressing technology challenges and could be counted on to deliver quality results.</p>
-    						    <small><a href="#" title="">Paul Hamilton</a><cite> | CTO @ Walsh Integrated</cite></small>
-    					    </blockquote>
+			  	  <% unless @testimonials.empty? %>
+              <% @testimonials.each do |testimonial| %>
+              <div class="testimonial">
+    			  	  <div class="media">
+                  <% if testimonial.avatar %>
+                    <%= image_tag testimonial.avatar, "class" => "media-object pull-left" %>
+                  <% end %>
+                  
+      					  <div class="media-body">
+      				  	  <blockquote>
+      						    <p><%= testimonial.description %></p>
+      						    <small><%= raw testimonial.author %></small>
+      					    </blockquote>
+        				  </div>
       				  </div>
     				  </div>
-  				  </div>
-		
-  				<div class="testimonial">
-  					<div class="media">
-  					  <%= image_tag "alex_aw.jpeg", "class" => "media-object pull-left" %>
-  						<div class="media-body">
-  							<blockquote>
-  								  <p>Graham has an eye for detail and a can do attitude that makes him extremely valuable to a project. Working with Graham was a great way to learn more about web development, which he has a firm understanding of.</p>
-  								  <small><a href="#" title="">Alex Aw</a><cite> | IT @ Walsh Integrated</cite></small>
-  							</blockquote> 
-  						</div>
-  					</div>
-  				</div>
+			  	    <% end %>			  	      
+			  	  <% end %>
+
   			</div><!--/section-->
 	
   			<div class="section hobbies" id="hobbies">
@@ -222,8 +181,9 @@ If you need some help on a project or have something cool that you want to build
   			  	<div class="row">
   			  		<div class="span9">
   			  		  <span class="label"><span class="glyphicons white hockey"><i></i>Ball Hockey</span></span>
-  			  			<span class="label"><span class="glyphicons white football"><i></i>Football</span></span>
-                <span class="label"><span class="glyphicons white dog"><i></i>Dog</span></span>
+  			  			<span class="label"><span class="glyphicons white football"><i></i>NFL</span></span>
+  			  			<span class="label"><span class="glyphicons white football"><i></i>NHL</span></span>
+                <span class="label"><span class="glyphicons white dog"><i></i>Lyla</span></span>
     		  		</div>
   			  	</div>
 	  	

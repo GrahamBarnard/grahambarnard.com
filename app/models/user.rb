@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   attr_accessor :password_confirmation
   attr_reader :password
 
-  attr_accessible :name, :password, :password_confirmation
+  attr_accessible :name, :password, :password_confirmation, :avatar, :fullname, :title, :website, :email, :phone, :welcome, :twitter, :github, :linkedin
 
   validate :password_must_be_present
   
