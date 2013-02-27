@@ -74,8 +74,8 @@
        	  			 <div class="timeline-item-trigger"><span class="glyphicons white <%= if index == 0 then "circle_minus" else "circle_plus" end %>" data-toggle="collapse" data-target="#education<%= index %>"><i></i></span></div>
        	  			 	<div class="timeline-arrow"><i></i></div>
        	  			 	<div class="timeline-item-content">
-       						<h3 class="timeline-item-title" data-toggle="collapse" data-target="#education<%= index %>"><%= employment.position %></h3>
-       						<div class="collapse <%= if index == 0 then "in" end %>" id="education<%= index %>">
+       						<h3 class="timeline-item-title" data-toggle="collapse" data-target="#employment<%= index %>"><%= employment.position %></h3>
+       						<div class="collapse <%= if index == 0 then "in" end %>" id="employment<%= index %>">
        							<p><small class="muted">from <%=  employment.start_date.strftime("%B %Y") %> to <%= employment.finish_date.strftime("%B %Y") %></small></p>
        							<h4 class="media-heading primary-color"></h4>
        							<%= raw employment.description %>
@@ -226,6 +226,10 @@
             							<h2 class="primary-color"><%= website.name %></h2>
             							<div>
             							  <%= raw website.description %>
+            							  <% if website.url? %>
+            							    <p><a href="<%= website.url %>" target="_blank" title="View Website" class="noprint">→ View website</a></p>
+                            <% end %>
+                            
             							</div>
 
             							<ul class="pager">
