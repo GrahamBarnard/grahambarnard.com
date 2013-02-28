@@ -71,7 +71,7 @@
        	  			 	    -  <%= employment.finish_date.year %>
        	  			 	  <% end %>
        	  			 	</div>
-       	  			 <div class="timeline-item-trigger"><span class="glyphicons white <%= if index == 0 then "circle_minus" else "circle_plus" end %>" data-toggle="collapse" data-target="#education<%= index %>"><i></i></span></div>
+       	  			 <div class="timeline-item-trigger"><span class="glyphicons white <%= if index == 0 then "circle_minus" else "circle_plus" end %>" data-toggle="collapse" data-target="#employment<%= index %>"><i></i></span></div>
        	  			 	<div class="timeline-arrow"><i></i></div>
        	  			 	<div class="timeline-item-content">
        						<h3 class="timeline-item-title" data-toggle="collapse" data-target="#employment<%= index %>"><%= employment.position %></h3>
@@ -152,7 +152,7 @@
   	  	</div><!--/section-->
 
   	    	<div class="section" id="testimonials">
-  			  	<h2 class="section-title"><span class="glyphicons white comments"><i></i></span>Testimonials<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
+  			  	<h2 class="section-title"><span class="glyphicons white comments"><i></i></span>Testimonials<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
 	  	
 			  	  <% unless @testimonials.empty? %>
               <% @testimonials.each do |testimonial| %>
@@ -176,7 +176,7 @@
   			</div><!--/section-->
 	
   			<div class="section hobbies" id="hobbies">
-  		  		<h2 class="section-title"><span class="glyphicons white heart_empty"><i></i></span>Hobbies<a href="#phone-navbar" class="top visible-phone"><i></i></span></a></h2>
+  		  		<h2 class="section-title"><span class="glyphicons white heart_empty"><i></i></span>Hobbies<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
 	  	
   			  	<div class="row">
   			  		<div class="span9">
@@ -190,7 +190,7 @@
   		  	</div><!--/section-->
   	
   		  		<div class="section clearfix noprint" id="portfolio">
-      				<h2 class="section-title"><span class="glyphicons white show_thumbnails"><i></i></span>Portfolio<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
+      				<h2 class="section-title"><span class="glyphicons white show_thumbnails"><i></i></span>Portfolio<a href="#phone-navbar" class="top visible-phone">  <span class="glyphicons white up_arrow"><i></i></span></a></h2>
               <div class="row" id="portfolio-items">
     				    <!-- Featured Portfolio items -->
               <% unless @websites.empty? %>
@@ -286,7 +286,6 @@
 
       		</div><!--/section-->
       		<span class="clear"></span>
-
   </div>
 
   <div class="span2 sbright noprint" id="sidebar">
