@@ -104,27 +104,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .social-navigation { position: absolute; bottom :10px; right:10px; }
 
-.social-network { 
-	display:inline-block;   
-	background: url(image_path('social-networks.png')) no-repeat top left; 
-	width: 32px; 
-	height: 32px; 
-	background-position-y: -42px; 
-	cursor:pointer;
-}
-
-
-.social-network.twitter{ background-position: -1134px -42px}
-.social-network.skype{ background-position: -924px -42px}
-.social-network.facebook{ background-position: -210px -42px}
-.social-network.linkedin{ background-position: -504px -42px}
-.social-network.email { background-position: -756px -42px; }
-
-.social-network.twitter:hover,.active .social-network.twitter{ background-position: -1134px 0}
-.social-network.skype:hover,.active .social-network.skype{ background-position: -924px 0}
-.social-network.facebook:hover,.active .social-network.facebook{ background-position: -210px 0}
-.social-network.linkedin:hover,.active .social-network.linkedin{ background-position: -504px 0}
-.social-network.email:hover, .active .social-network.email { background-position: -756px 0; }
 
 .align-right { text-align: right; }
 .align-left { text-align: left; }
@@ -161,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #resumenav.affix {top: 30px; overflow: hidden; padding-left: 30px;}
-#resumenav a {text-transform: uppercase; text-shadow: none; padding: 5px 30px; margin-left: -30px; margin-right: 0;}
+#resumenav a {text-transform: uppercase; text-shadow: none; padding: 5px 30px; margin-left: -30px; margin-right: 0; width: 235px;}
 
 /* Author block */
 .author {margin-bottom: 30px; overflow: hidden;}
@@ -234,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
 .blogmeta .glyphicons i:before{font-size: 11px; line-height: 16px; color: #999;}
 #portfolio #portfolio-filters {margin-top: -2px; margin-bottom: 28px;}
 .blogitem-content h2, .portfolioitem-content h2 {margin-top: 30px;}
-
+.portfolioitem, .portfolioitem img, .portfolioitem .portfolioitem-hoverinfo { border-radius:20em; overflow:hidden; }
 
 /* Normal Desktop */
 @media (min-width: 980px) and (max-width: 1199px) {
@@ -254,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
 	.skills h2.section-title, #personal-information h2 {margin-bottom: 0;}
 	.testimonial {margin-bottom: 0;}
 	#portfolio #portfolio-filters {margin-bottom: 18px;}
-	.blogitem .blogitem-hoverinfo, .portfolioitem .portfolioitem-hoverinfo {padding: 10px 20px;}
+	.blogitem .blogitem-hoverinfo, .portfolioitem .portfolioitem-hoverinfo {padding: 10px 20px;}  
 	.blogitem .blogitem-hoverinfo {padding: 20px;}
 	.blogitem-content h2, .portfolioitem-content h2 {margin-top: 20px;}
 	#portfolio-back, #blog-back {margin-bottom: 20px;}
@@ -364,3 +343,4 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glyphicons.empty { padding: 5px 0; } 
+.portfolioitem .portfolioitem-hoverinfo { padding: 40px; }

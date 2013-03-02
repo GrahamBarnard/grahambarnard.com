@@ -60,7 +60,7 @@
     	</div><!--/section-->
 
     		<div class="section" id="employment">
-  		  	<h2 class="section-title"><span class="glyphicons white share_alt"><i></i></span>Employment<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
+  		  	<h2 class="section-title"><span class="glyphicons white briefcase"><i></i></span>Employment<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
   	
   	      <% unless @employments.empty? %>
   		  	  <div class="timeline">
@@ -146,7 +146,15 @@
           <% end %>
   	
   		  	<hr/>
-  				  	
+  				<div class="row">
+			  		<div class="span2">CMS</div>
+			  		<div class="span7">
+			  			<span class="label">Wordpress</span>
+			  			<span class="label">Magento</span>
+			  			<span class="label">Expression Engine</span>
+			  			<span class="label">Joomla</span>
+			  		</div>
+			  	</div>  	
 
   	
   	  	</div><!--/section-->
@@ -202,7 +210,7 @@
                       
                       <div class="portfolioitem-actions">
                         <% if website.url? %>
-                          <a href="<%= website.url %>" class="tips img-circle lightbox" title="Preview website" data-placement="bottom" data-fancybox-group="portfolioimages"><span class="glyphicons white zoom_in"><i></i></span></a>
+                          <a href="<%= website.url %>" target="_blank" class="tips img-circle" title="Preview website" data-placement="bottom" data-fancybox-group="portfolioimages"><span class="glyphicons white zoom_in"><i></i></span></a>
                         <% end %>
       								
         								<a href="#portfolioitem-<%= index %>" class="tips more-info img-circle" title="View Project" data-placement="bottom"><span class="glyphicons white share"><i></i></span></a>
