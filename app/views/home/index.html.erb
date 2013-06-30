@@ -230,7 +230,17 @@
                     <% unless @websites.empty? %>
                       <% @websites.each_with_index do |website, index| %>
             						<div class="portfolioitem-content hidden" id="portfolioitem-<%= index %>">
-            							<%= image_tag website.imageurl %>
+                          <div id="myCarousel" class="carousel slide">
+                            <!-- Carousel items -->
+                            <div class="carousel-inner">
+                              <div class="active item"><%= image_tag website.imageurl %></div>
+                              <div class="item"><%= image_tag website.imageurl %></div>
+                              <div class="item"><%= image_tag website.imageurl %></div>
+                            </div>
+                            <!-- Carousel nav -->
+                            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                          </div>
             							<h2 class="primary-color"><%= website.name %></h2>
             							<div>
             							  <%= raw website.description %>
